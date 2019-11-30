@@ -101,7 +101,7 @@ const Shop = () => {
             description="Search and find books of your choice"
             className="container-fluid">
             <div className="row">
-                <div className="col-3">
+                <div className="col-xs-12 col-md-2">
                     <h4>Filter by categories</h4>
                     <ul>
                         <Checkbox
@@ -123,12 +123,13 @@ const Shop = () => {
                     </div>
                 </div>
 
-                <div className="col-9">
-                {JSON.stringify(myFilters)}
-                    <h2 className="mb-4">Products</h2>
+                <div className="col-xs-12 col-nd-10">
+                    <h2 className="mb-4 center">Products</h2>
                     <div className="row">
                         {filteredResults.map((product, i) => (
-                           <Card key={i} product={product} />
+                          <div key={i} className="col-sm-6 col-md-4 mb-3">
+                            <Card  product={product}/>
+                         </div>
                         ))}
                     </div>
                     <hr />
