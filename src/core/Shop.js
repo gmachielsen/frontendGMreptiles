@@ -123,7 +123,7 @@ const Shop = () => {
                     </div>
                 </div>
 
-                <div className="col-xs-12 col-nd-10">
+                <div className="col-xs-12 col-md-10">
                     <h2 className="mb-4 center">Products</h2>
                     <div className="row">
                         {filteredResults.map((product, i) => (

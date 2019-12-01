@@ -61,9 +61,6 @@ export const isAuthenticated = () => {
   if(typeof window == "undefined") {
     return false
   }
-  console.log("hieronder token");
-  console.log(localStorage.getItem("jwt"));
-  console.log("einde token");
   if (localStorage.getItem("jwt")) {
     return JSON.parse(localStorage.getItem("jwt"))
   } else {
