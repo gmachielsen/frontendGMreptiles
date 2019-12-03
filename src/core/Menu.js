@@ -2,6 +2,7 @@ import React, {Fragment} from "react"
 import {Link, withRouter} from "react-router-dom"
 import { signout, isAuthenticated } from "../auth"
 import {itemTotal} from "./cartHelpers";
+import "../styles/menu.css"
 
 const isActive = (history, path) => {
     if(history.location.pathname === path) {
@@ -13,7 +14,7 @@ const isActive = (history, path) => {
 
 const Menu = ({ history }) => (
     <div className="menu-bar">
-        <ul className="nav nav-tabs bg-primary">
+        <ul className="nav nav-tabs">
             <li className="nav-item">
                 <Link className="nav-link" style={isActive(history, "/")} to="/">Home</Link>
             </li>
