@@ -12,6 +12,10 @@
     margin-top: -20px;
 }
 
+.menu-bar {
+    background-color: #332f2b !important;
+}
+
 @media only screen and (max-width: 600px) {
     .jumbotron h2 {
       margin-top: 10px;
