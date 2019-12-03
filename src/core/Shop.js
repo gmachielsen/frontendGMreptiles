@@ -28,7 +28,7 @@ const Shop = () => {
     };
 
     const loadFilteredResults = newFilters => {
-        console.log(newFilters);
+        // console.log(newFilters);
         getFilteredProducts(skip, limit, newFilters).then(data => {
             if (data.error) {
                 setError(data.error);
@@ -99,9 +99,10 @@ const Shop = () => {
         <Layout
             title="Shop Page"
             description="Search and find books of your choice"
-            className="container-fluid">
+            className="container-fluid"
+        >
             <div className="row">
-                <div className="col-xs-12 col-md-2">
+                <div className="col-4">
                     <h4>Filter by categories</h4>
                     <ul>
                         <Checkbox
@@ -123,13 +124,13 @@ const Shop = () => {
                     </div>
                 </div>
 
-                <div className="col-xs-12 col-md-10">
-                    <h2 className="mb-4 center">Products</h2>
+                <div className="col-8">
+                    <h2 className="mb-4">Products</h2>
                     <div className="row">
                         {filteredResults.map((product, i) => (
-                          <div key={i} className="col-sm-6 col-md-4 mb-3">
-                            <Card  product={product}/>
-                         </div>
+                            <div key={i} className="col-4 mb-3">
+                                <Card product={product} />
+                            </div>
                         ))}
                     </div>
                     <hr />
